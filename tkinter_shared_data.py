@@ -3,6 +3,21 @@ from tkinter import messagebox
 import json
 import os
 
+"""
+元件由大到小是 tk.Tk 到 tk.frame 到 tk. Label/ button
+
+tk.Tk: 根窗口（Root Window）
+    这是整个 Tkinter 应用程序的主窗口，所有其他组件都在这个窗口之内。
+
+tk.Frame: 框架（Frame）
+这是一个容器组件，可以包含其他组件（如按钮、标签、输入框等）。框架用于组织和布局子组件。
+框架可以嵌套在根窗口或其他框架中。
+
+其他组件: 如 tk.Label、tk.Button、tk.Entry 等
+这些是实际的控件或小部件，用于显示信息或与用户交互。
+这些组件通常放置在框架内，但也可以直接放置在根窗口中。
+"""
+
 class SharedDataApp(tk.Tk):
     """
     Main Class, 在 Page a & b 切換，然後儲存參數到 data.json 中, 實現參數共享
